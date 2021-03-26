@@ -6,10 +6,10 @@
 using namespace Upp;
 
 #define IMAGECLASS TestImg
-#define IMAGEFILE <TestXMLMenu/TestXMLMenu.iml>
+#define IMAGEFILE <examples/TestXMLMenu/TestXMLMenu.iml>
 #include <Draw/iml_header.h>
 
-#define LAYOUTFILE <TestXMLMenu/TestXMLMenu.lay>
+#define LAYOUTFILE <examples/TestXMLMenu/TestXMLMenu.lay>
 #include <CtrlCore/lay.h>
 
 struct Pane : public StaticRect

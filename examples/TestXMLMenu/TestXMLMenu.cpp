@@ -3,7 +3,7 @@
 using namespace Upp;
 
 #define IMAGECLASS TestImg
-#define IMAGEFILE <TestXMLMenu/TestXMLMenu.iml>
+#define IMAGEFILE <examples/TestXMLMenu/TestXMLMenu.iml>
 #include <Draw/iml_source.h>
 
 static void dummyCb(void)
@@ -14,26 +14,26 @@ static void dummyCb(void)
 void TestXMLMenu::commandCb(XMLCommands &cmds)
 {
 	cmds
-		.Add("New"			, callback(dummyCb))
-		.Add("NewCalc"		, callback(dummyCb))
-		.Add("Open"			, callback(dummyCb))
-		.Add("Save"			, callback(dummyCb))
-		.Add("SaveAs"		, callback(dummyCb))
-		.Add("JobInfo"		, callback(dummyCb))
-		.Add("PrintPreview"	, callback(dummyCb))
-		.Add("Print"		, callback(dummyCb))
-		.Add("Next"			, callback(dummyCb))
+		.Add("New"			, [] {})
+		.Add("NewCalc"		, [] {})
+		.Add("Open"			, [] {})
+		.Add("Save"			, [] {})
+		.Add("SaveAs"		, [] {})
+		.Add("JobInfo"		, [] {})
+		.Add("PrintPreview"	, [] {})
+		.Add("Print"		, [] {})
+		.Add("Next"			, [] {})
 		.Add("Previous"		, "PREVIOUS")	// custom command
 		.Add("Settings"		, "SETTINGS")	// custom command
 		.Add("Help"			, "HELP")		// custom command
 		.Add("Quit"			, THISBACK(quitCb))
-		.Add("Exit"			, callback(dummyCb))
-		.Add("Flag"			, callback(dummyCb))
-		.Add("Remove"		, callback(dummyCb))
-		.Add("Delete"		, callback(dummyCb))
-		.Add("ListAdd"		, callback(dummyCb))
-		.Add("ListRemove"	, callback(dummyCb))
-		.Add("RtfImport"	, callback(dummyCb))
+		.Add("Exit"			, [] {})
+		.Add("Flag"			, [] {})
+		.Add("Remove"		, [] {})
+		.Add("Delete"		, [] {})
+		.Add("ListAdd"		, [] {})
+		.Add("ListRemove"	, [] {})
+		.Add("RtfImport"	, [] {})
 		.Add("TestControl"	, testDrop, Size(150, 0))
 	;
 }

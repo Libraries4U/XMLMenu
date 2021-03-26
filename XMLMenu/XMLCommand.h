@@ -90,9 +90,9 @@ class XMLCommands : DeepCopyOption<XMLCommands>
 			{ return Add(String(id), cb); }
 		
 		// adds a generated submenu "command"
-		XMLCommands &Add(String const &id, Function<void(XMLToolBar &)> mc);
-		XMLCommands &Add(const char *id, Function<void(XMLToolBar &)> mc)
-			{ return Add(String(id), mc); }
+		XMLCommands &Sub(String const &id, Function<void(XMLToolBar &)> mc);
+		XMLCommands &Sub(const char *id, Function<void(XMLToolBar &)> mc)
+			{ return Sub(String(id), mc); }
 		
 		// adds a control
 		XMLCommands &Add(String const &id, Ctrl &ctrl);
@@ -115,9 +115,9 @@ class XMLCommands : DeepCopyOption<XMLCommands>
 			{ return Add(enabled, String(id), cb); }
 		
 		// adds a generated submenu "command", allows enable/disable item
-		XMLCommands &Add(bool enabled, String const &id, Function<void(XMLToolBar &)> mc);
-		XMLCommands &Add(bool enabled, const char *id, Function<void(XMLToolBar &)> mc)
-			{ return Add(enabled, String(id), mc); }
+		XMLCommands &Sub(bool enabled, String const &id, Function<void(XMLToolBar &)> mc);
+		XMLCommands &Sub(bool enabled, const char *id, Function<void(XMLToolBar &)> mc)
+			{ return Sub(enabled, String(id), mc); }
 		
 		// adds a control, allows enable/disable item
 		XMLCommands &Add(bool enabled, String const &id, Ctrl &ctrl);

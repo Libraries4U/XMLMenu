@@ -98,7 +98,7 @@ XMLCommands &XMLCommands::Add(String const &id, Function<void()> cb)
 }
 
 // adds a generated submenu "command"
-XMLCommands &XMLCommands::Add(String const &id, Function<void(XMLToolBar &)> mc)
+XMLCommands &XMLCommands::Sub(String const &id, Function<void(XMLToolBar &)> mc)
 {
 	bool has = Has(id);
 	XMLCommand *cmd;
@@ -180,7 +180,7 @@ XMLCommands &XMLCommands::Add(bool enabled, String const &id, Function<void()> c
 }
 
 // adds a generated submenu "command", allows enable/disable item
-XMLCommands &XMLCommands::Add(bool enabled, String const &id, Function<void(XMLToolBar &)> mc)
+XMLCommands &XMLCommands::Sub(bool enabled, String const &id, Function<void(XMLToolBar &)> mc)
 {
 	bool has = Has(id);
 	XMLCommand *cmd;
